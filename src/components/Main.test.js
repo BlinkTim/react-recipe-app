@@ -7,3 +7,9 @@ test('renders main content', () => {
     const mainElement = screen.getByText(/Main Content/i);
     expect(mainElement).toBeInTheDocument();
 });
+test('renders main content', () => {
+    render(<Main>Main Content</Main>);
+    const mainElement = screen.getByText(/Main Content/i);
+    expect(mainElement).toBeInTheDocument();
+});
+

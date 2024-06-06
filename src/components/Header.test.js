@@ -31,3 +31,30 @@ test('toggles theme', () => {
     fireEvent.click(button);
     expect(button).toContainHTML('<svg');  // Check if the icon changed
 });
+test('renders Home link', () => {
+    render(
+        <ThemeProvider>
+            <Router>
+                <Header />
+            </Router>
+        </ThemeProvider>
+    );
+    const linkElement = screen.getByText(/Home/i);
+    expect(linkElement).toBeInTheDocument();
+});
+
+test('toggles theme', () => {
+    render(
+        <ThemeProvider>
+            <Router>
+                <Header />
+            </Router>
+        </ThemeProvider>
+    );
+
+    const button = screen.getByRole('button');
+    expect(button).toBeInTheDocument();
+
+    fireEvent.click(button);
+    expect(button).toContainHTML('<svg');  // Check if the icon changed
+});

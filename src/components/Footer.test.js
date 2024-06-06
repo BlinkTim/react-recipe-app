@@ -7,3 +7,9 @@ test('renders footer content', () => {
     const footerElement = screen.getByText(/© 2024 My Recipe App. All rights reserved./i);
     expect(footerElement).toBeInTheDocument();
 });
+test('renders footer content', () => {
+    render(<Footer />);
+    const footerElement = screen.getByText(/© 2024 My Recipe App. All rights reserved./i);
+    expect(footerElement).toBeInTheDocument();
+});
+
